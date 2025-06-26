@@ -3,15 +3,10 @@ import random
 def openWordList():
     try:
         with open("words.txt") as f:
-            wordList = [word.strip().lower() for word in f if len(word.strip()) == 5]
-            return wordList
+            return [word.strip().lower() for word in f if len(word.strip()) == 5]
     except:
         print("Word list could not be opened or found.")
         exit()
-
-def pickWord():
-    wordList = openWordList()
-    return random.choice(wordList)
 
 def get_feedback(guess, secret):
     feedback = []
@@ -24,29 +19,24 @@ def get_feedback(guess, secret):
             feedback.append("⬛")
     return "".join(feedback)
 
-def validateInput(guess):
-    wordList = openWordList()
-    if guess in wordList:
-        return True
-    else:
-        return False
-
 def playGame():
-    secretWord = pickWord()
-    
+    wordList = openWordList()
+    secretWord = random.choice(wordList)
+
+    print("Welcome to Wordle!")
     for _ in range(6):
         guess = input(">>> ").lower()
-        while not validateInput(guess):
-            print("Invalid input. Make sure you typed in a 5 letter word")
+        while guess not in wordList:
+            print("Invalid input. Make sure you typed in a 5-letter word")
             guess = input(">>> ").lower()
-        
+
         feedback = get_feedback(guess, secretWord)
         print(feedback)
 
         if guess == secretWord:
             print("🎉 You guessed the word!")
             return
-    
+
     print(f"❌ Out of attempts. The word was {secretWord}")
 
 if __name__ == "__main__":
