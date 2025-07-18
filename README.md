@@ -47,6 +47,14 @@ python3 wordle.py # play the game on the terminal
 ```
 
 ---
+## Contributing
+
+Any contributions and updates are welcome! :)
+Fork the repo and create a PR with your changes, make sure to document your code.
+
+If you have any questions, feature requests, or anything, feel free to post it under the repo's issues
+
+---
 
 ## License
 MIT License - Do what you want
