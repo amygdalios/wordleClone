@@ -2,7 +2,8 @@
 
 A small project i did for fun using just python cuz i was too bored to do nothing.
 
-### Upcoming Features (TODO):
+## Upcoming Features (TODO):
+
 - Global Leaderboards
 - Better UI
 
@@ -17,17 +18,11 @@ git clone https://github.com/amygdalios/wordleClone.git
 cd wordleClone
 ```
 
-### Setup a python venv
+### Run setup script
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### Install dependences
-
-```bash
-pip install -r requirements.txt
+```shell
+# You may need to chmod +x setup.sh
+./setup.sh
 ```
 
 ## How to play
@@ -47,6 +42,7 @@ python3 wordle.py # play the game on the terminal
 ```
 
 ---
+
 ## Contributing
 
 Any contributions and updates are welcome! :)
@@ -57,4 +53,5 @@ If you have any questions, feature requests, or anything, feel free to post it u
 ---
 
 ## License
+
 MIT License - Do what you want
