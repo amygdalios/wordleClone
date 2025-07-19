@@ -5,7 +5,7 @@ import random
 # Load words
 def loadWords():
     try:
-        with open("words.txt") as f:
+        with open("../words.txt") as f:
             return [word.strip().lower() for word in f if len(word.strip()) == 5]
     except:
         messagebox.showerror("Error", "Word list could not be opened or found.")
